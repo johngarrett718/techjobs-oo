@@ -16,12 +16,57 @@ import java.util.ArrayList;
 public class JobForm {
 
     @NotNull
-    @Size(min=1, message = "Name may not be empty")
+    @Size(min = 1, message = "Name may not be empty")
     private String name;
 
     @NotNull
     private int employerId;
+    @NotNull
+    private Location locationId;
+    @NotNull
+    private PositionType positionTypeId;
+    @NotNull
+    private CoreCompetency coreCompetencyId;
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getEmployerId() {
+        return employerId;
+    }
+
+    public void setEmployerId(int employerId) {
+        this.employerId = employerId;
+    }
+
+    public Location getLocationId() {
+        return locationId;
+    }
+
+    public void setLocationId(Location locationId) {
+        this.locationId = locationId;
+    }
+
+    public PositionType getPositionTypeId() {
+        return positionTypeId;
+    }
+
+    public void setPositionTypeId(PositionType positionTypeId) {
+        this.positionTypeId = positionTypeId;
+    }
+
+    public CoreCompetency getCoreCompetencyId() {
+        return coreCompetencyId;
+    }
+
+    public void setCoreCompetencyId(CoreCompetency coreCompetencyId) {
+        this.coreCompetencyId = coreCompetencyId;
+    }
     /*
         TODO #3 - Included other fields needed to create a job,
         with correct validation attributes and display names.
@@ -42,24 +87,13 @@ public class JobForm {
         */
 
         employers = jobData.getEmployers().findAll();
+        locations = jobData.getLocations().findAll();
+        coreCompetencies = jobData.getCoreCompetencies().findAll();
+        positionTypes = jobData.getPositionTypes().findAll();
+
 
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getEmployerId() {
-        return employerId;
-    }
-
-    public void setEmployerId(int employerId) {
-        this.employerId = employerId;
-    }
 
     public ArrayList<Employer> getEmployers() {
         return employers;
