@@ -22,11 +22,11 @@ public class JobForm {
     @NotNull
     private int employerId;
     @NotNull
-    private Location locationId;
+    private int locationId;
     @NotNull
-    private PositionType positionTypeId;
+    private int positionTypeId;
     @NotNull
-    private CoreCompetency coreCompetencyId;
+    private int coreCompetencyId;
 
     public String getName() {
         return name;
@@ -44,27 +44,27 @@ public class JobForm {
         this.employerId = employerId;
     }
 
-    public Location getLocationId() {
+    public int getLocationId() {
         return locationId;
     }
 
-    public void setLocationId(Location locationId) {
+    public void setLocationId(int locationId) {
         this.locationId = locationId;
     }
 
-    public PositionType getPositionTypeId() {
+    public int getPositionTypeId() {
         return positionTypeId;
     }
 
-    public void setPositionTypeId(PositionType positionTypeId) {
+    public void setPositionTypeId(int positionTypeId) {
         this.positionTypeId = positionTypeId;
     }
 
-    public CoreCompetency getCoreCompetencyId() {
+    public int getCoreCompetencyId() {
         return coreCompetencyId;
     }
 
-    public void setCoreCompetencyId(CoreCompetency coreCompetencyId) {
+    public void setCoreCompetencyId(int coreCompetencyId) {
         this.coreCompetencyId = coreCompetencyId;
     }
     /*
